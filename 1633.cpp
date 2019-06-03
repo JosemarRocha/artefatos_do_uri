@@ -1,6 +1,6 @@
 #include <iostream>
 #include <queue> //sera usado para filas de prioridade
-#include <vector> //vetores...È
+#include <vector> //vetores...√©
 #include <utility> //sera usado para as tuplas
 
 using namespace std;
@@ -24,7 +24,7 @@ int main(){
             cin >> t >> c; //recebendo tempo de execucao e de ciclos
             processos.push(make_pair(t,c)); //criando uma tupla dos dois
         }
-        execucao = processos.top().first; //pegando o elemento no topo de processos, pois È meu tempo de execucao
+        execucao = processos.top().first; //pegando o elemento no topo de processos, pois √© meu tempo de execucao
 
         while(!processos.empty()){
             p = processos.top(); //pega a tupla no topo do vetor de processos
@@ -38,9 +38,9 @@ int main(){
                 f.pop();
             }
             f.push(make_pair(p.second, p.first)); //insere a tupla de p em f
-            processos.pop();
+            processos.pop(); //remove a tupla no topo de processos
         }
-        while(!f.empty()){
+        while(!f.empty()){ //repete quase o mesmo processo acima at√© q f esteja completamente vazio
             if(f.top().second <= execucao){
                 espera += execucao - f.top().second;
             }else{
