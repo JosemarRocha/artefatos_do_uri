@@ -49,7 +49,7 @@ int main(){
             execucao += f.top().first;
             f.pop();
         }
-        cout << espera<< endl;
+        cout << espera<< endl; //saída do resultado que é o tempo total de espera
     }
     return 0;
 }
