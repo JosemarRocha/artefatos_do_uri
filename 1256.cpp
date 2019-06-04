@@ -13,7 +13,7 @@ int main()
         } else
             x=true;
         int a,b;
-        cin>>a>>b; //recebe a quantidade de endereço base e quantidade de chaves
+        cin>>a>>b; //recebe a quantidade de endereÃ§o base e quantidade de chaves
         int c[b],i=0;
         for(int j=0;j<b;j++)
             cin>>c[j]; //insere chaves no vetor
