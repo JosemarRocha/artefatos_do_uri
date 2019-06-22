@@ -30,10 +30,10 @@ void QuickSort (Rota * v, int inicio, int fim){
 int main(){
     int m, n, x, y, z;
     int i, j;
-    //SCAN NO NUMERO DE V…RTICES E ARESTAS
+    //SCAN NO NUMERO DE V√âRTICES E ARESTAS
     while(scanf("%d %d", &m, &n) && m){
         int custo=0,reducao=0;
-        int rotas[m+1]; //VETOR ROTAS IR¡ RECEBER A ROTA QUE SERA UTILIZADA EM CADA VERTICE
+        int rotas[m+1]; //VETOR ROTAS IR√Å RECEBER A ROTA QUE SERA UTILIZADA EM CADA VERTICE
         //PREENCHE O VETOR COM NUMEROS DE 0 A M (NUMERO DE ARESTAS)
         for (i=0; i<m; i++){
             rotas[i] = i;
@@ -49,12 +49,12 @@ int main(){
         //ORDENA O VETOR COM AS ROTAS
         QuickSort(vetor, 0, n-1);
 
-        //O LA«O VERIFICA A ROTA COM MENOR TAMANHO APARTIR DO V…RTICE I
+        //O LA√áO VERIFICA A ROTA COM MENOR TAMANHO APARTIR DO V√âRTICE I
         for (i=0;i<n;i++){
             if (rotas[vetor[i].inicio] != rotas[vetor[i].fim]){
                 reducao += vetor[i].tamanho; //CALCULA O GASTO UTILIZANDO A ROTA I
                 int aux = rotas[vetor[i].fim];
-                //SALVA NO VETOR ROTAS A ROTA UTILIZADA NO CAMINHO DO ÕNDICE J
+                //SALVA NO VETOR ROTAS A ROTA UTILIZADA NO CAMINHO DO √çNDICE J
                 for (j=0;j<m;j++){
                     if(rotas[j] == aux){
                         rotas[j] = rotas[vetor[i].inicio];
