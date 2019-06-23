@@ -13,11 +13,11 @@ vector < vector < string > > s; //Matriz de strings para armazenar os nomes
 vector < struct Atributos > att;    //Vetor da struct Atributos para armazenar os valores limitantes e os atributos
 int n;
 
-//funÁ„o de busca em largura que ajuda a adicionar apartir do enviador o atributo de acordo a lista de amigos de cada um
+//fun√ß√£o de busca em largura que ajuda a adicionar apartir do enviador o atributo de acordo a lista de amigos de cada um
 void bfs(int enviador, struct Atributos E, int tam){
-	int visitado[30]; //cria um vetor para armazenar os vÈrtices visitados
+	int visitado[30]; //cria um vetor para armazenar os v√©rtices visitados
 	memset(visitado, 0, sizeof visitado);
-	queue < int >  q; //cria uma fila para receber os vÈrtices que ser„o visitados
+	queue < int >  q; //cria uma fila para receber os v√©rtices que ser√£o visitados
 	q.push(enviador); //pega o parametro enviador, que representa quem originou o spam
 	int atual;
 
@@ -36,7 +36,7 @@ void bfs(int enviador, struct Atributos E, int tam){
 		//Enquanto i for menor que o tamanho do vetor de lista de amigos da linha atual
 		for (int i = 0; i < v[atual].size(); i++){
 			if (!visitado[v[atual][i]]){
-				q.push(v[atual][i]); //add o elemento na fila se ainda n„o foi visitado
+				q.push(v[atual][i]); //add o elemento na fila se ainda n√£o foi visitado
 			}
 		}
 	}
@@ -87,7 +87,7 @@ int main(){
 		for ( int i = 0 ; i < att.size() ; i++ ){
 			bfs(VETOR[i], att[i], i+1);
 		}
-        //imprime o vetor de strings que apÛs o bfs o nome j· possui seus atributos
+        //imprime o vetor de strings que ap√≥s o bfs o nome j√° possui seus atributos
 		for ( int i = 1 ; i <= n; i++ ){
 			if ( i != 1 )
 				cout << endl;
