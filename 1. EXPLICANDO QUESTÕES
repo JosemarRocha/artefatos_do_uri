@@ -45,6 +45,7 @@ Desenhando Labirintos - 1076
 Problema: Queremos desenhar um labirinto sem tirar a caneta do papel, os labirintos podem ser de tamanho, por exemplo, 3x3, no máximo
 7x7.
 Você vai receber (T) casos de teste, (N) um ponto inicial, (V) número de vértices, (A) número de arestas.
+O desenho começa a partir do ponto (N) e termina retornando a este ponto.
 
 Solução: 
 Criamos uma matriz que irá servir como o nosso papel em que será desenhado o grafo.
