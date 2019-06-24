@@ -1,0 +1,16 @@
+ESTRADAS ESCURAS 1152
+PROBLEMA: Byteland quer economizar, eles querem ligar só as luzes necessárias, onde sempre existirá algum caminho iluminado de qualquer junção de Byteland para qualquer outra junção.
+Você recebe o número de junções, a quantidade de ruas, e em seguida 3 valores especificando qual será a estrada bidirecional entre x e y com z metros.
+
+SOLUÇÃO:
+São utilizados 2 vetores:
+VETOR 1, com um struct da rota, que possui inicio, fim e tamanho/; 
+VETOR ROTAS, onde serão armazenadas as rotas para fazer o menor caminho;
+
+CONTADORES:
+custo, que recebe o tamanho/gasto de todas as rotas ao adicioná-las no VETOR1; 
+redução, que recebe o tamanho/custo de apenas as rotas selecionadas ao adicioná-las no VETOR ROTAS;
+
+Recebo todos os valores das possíveis rotas e armazeno no VETOR 1. Dou um quicksort de acordo com o tamanho da rota em ordem crescente.
+Em loop até n(quantidade de junções), verifico se o aquela posição do vetor rota já possui uma rota atribuída, se não, a rota de posição i é selecionada, e o contador de redução recebe quanto será gasto naquela rota. enfim, a posição correspondente ao inicio do caminho da rota recebe a rota utilizada, assim evitando que outras rotas sejam selecionada para aquele caminho.
+Enfim um printf com o custo - redução = quanto será economizado com o novo sistema de iluminação.
