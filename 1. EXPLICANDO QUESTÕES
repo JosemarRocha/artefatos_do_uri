@@ -19,3 +19,26 @@ Enfim um printf com o custo - redução = quanto será economizado com o novo si
 
 Eu Odeio SPAM, Mas Algumas Pessoas Amam - 1317
 PROBLEMA:
+
+--------------------//-------------------------
+
+Caixa Dois - 2173
+PROBLEMA: você deve calcular o maior valor que o político pode ter ganho asfaltando o menor numero de ruas. 
+Você recebe o número de esquinas(N) e de ruas(M) respectivamente, nas proximas N você recebe a esquina X com a esquina Y e custo o C.
+
+SOLUÇÃO:
+Algoritmo de Kruskal bucando pelo mínimo de uniões entre os vértices e que retorne o custo;
+1 Vetor (Rotas), que armazerna todos os inputs;
+Sort e reverse para ordenar decrescente;
+1 int quantia para calcular o gasto;
+
+Recebe todos os valores e armazena no vetor rotas; 
+Organiza o vetor por ordem crescente, usa Kruskal e pega o caminho mínimo com o mínimo de gastos;
+int quantia descresce em seu valor o custo anterior;
+Organiza o vetor por ordem decrescente, usa Kruskal e pega o caminho mínimo com o máximo de gastos;
+int quantia adiciona em seu valor o custo anterior;
+Enfim um printf com a quantia faturada pelo prefeito asfaltando o mínimo de ruas;
+
+--------------------//-------------------------
+
+
