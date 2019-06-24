@@ -14,3 +14,8 @@ redução, que recebe o tamanho/custo de apenas as rotas selecionadas ao adicion
 Recebo todos os valores das possíveis rotas e armazeno no VETOR 1. Dou um quicksort de acordo com o tamanho da rota em ordem crescente.
 Em loop até n(quantidade de junções), verifico se o aquela posição do vetor rota já possui uma rota atribuída, se não, a rota de posição i é selecionada, e o contador de redução recebe quanto será gasto naquela rota. enfim, a posição correspondente ao inicio do caminho da rota recebe a rota utilizada, assim evitando que outras rotas sejam selecionada para aquele caminho.
 Enfim um printf com o custo - redução = quanto será economizado com o novo sistema de iluminação.
+
+--------------------//-------------------------
+
+Eu Odeio SPAM, Mas Algumas Pessoas Amam - 1317
+PROBLEMA:
