@@ -89,13 +89,14 @@ void Graph::BFS(int s)
 int main(){
     int T;
     int i,j;
-    int k = 0;
+    int k = 1;
     Graph g(M);
-    while (++k < M){
+    while (k < M){
         g.addEdge(k, k + 1);
         g.addEdge(k, k - 1);
         g.addEdge(k, k + 5);
         g.addEdge(k, k - 5);
+	k++;
     }
     //g.printGraph();
     cin >> T;
