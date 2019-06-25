@@ -10,11 +10,11 @@ int matrix[5][5];
 int *proibidos;
 class Graph
 {
-	int V; 
+	int V;    // No. of vertices
 	list<int> *adj;
 	bool proibido(int v);
 public:
-	Graph(int V);
+	Graph(int V);  // Constructor
 	void addEdge(int v, int w);
 	void BFS(int s);
     //void printGraph();
@@ -72,8 +72,8 @@ void Graph::BFS(int s)
 			}
 		}
 	}
-                    if (dist[D] == -1) cout << "ROBBERS" << endl;
-                    else cout << "COPS" << endl;
+    if (dist[D] == -1) cout << "ROBBERS" << endl;
+    else cout << "COPS" << endl;
 }
 /*void Graph::printGraph() 
 { 
@@ -91,12 +91,13 @@ int main(){
     int i,j;
     int k = 1;
     Graph g(M);
+        g.addEdge(0,1);
     while (k < M){
-        g.addEdge(k, k + 1);
-        g.addEdge(k, k - 1);
+        if(k%5!=0) g.addEdge(k, k + 1);
+        if((k-1)%5!=0)g.addEdge(k, k - 1);
         g.addEdge(k, k + 5);
         g.addEdge(k, k - 5);
-	k++;
+        k++;
     }
     //g.printGraph();
     cin >> T;
@@ -117,7 +118,7 @@ int main(){
                 }
             }
         }
-        g.BFS(1);
+        g.BFS(0);
         T--;
     }
     return 0;
