@@ -10,11 +10,11 @@ int matrix[5][5];
 int *proibidos;
 class Graph
 {
-	int V;    // No. of vertices
+	int V; 
 	list<int> *adj;
 	bool proibido(int v);
 public:
-	Graph(int V);  // Constructor
+	Graph(int V);
 	void addEdge(int v, int w);
 	void BFS(int s);
     //void printGraph();
@@ -89,14 +89,13 @@ void Graph::BFS(int s)
 int main(){
     int T;
     int i,j;
-    int k = 1;
+    int k = 0;
     Graph g(M);
-    while (k < M){
+    while (++k < M){
         g.addEdge(k, k + 1);
         g.addEdge(k, k - 1);
         g.addEdge(k, k + 5);
         g.addEdge(k, k - 5);
-        k++;
     }
     //g.printGraph();
     cin >> T;
