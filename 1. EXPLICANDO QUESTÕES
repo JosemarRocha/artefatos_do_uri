@@ -85,3 +85,47 @@ Então recebo a quantidade de consultas que irei fazer.
 Digo a cidade de origem e a destino.
 Então a função me retorna se a carta foi enviada, se sim, imprime o tempo em horas, se não, informo que a carta não pode ser enviada.
 
+-------------------------------------------//-----------------------------------------
+
+Policia e Ladrao - 1905
+
+o problema é percorrer uma matriz de modo que a policia chegue ate o ladrao
+foi utizado lista adjacente na implementacao do gafro utilizado
+antes de iniciar os teste, foi criado um grado de 25 vertices correspondendo a cada um valor de uma matriz 5 x 5
+cada vertice so pode se ligar a outro vertice que esteja a uma unidade de distancia na mesma coluna ou mesma linha,
+assim por exemplo o vertice 5 pode se ligar ao vertive 4 (por estao na mesma linha i,em j-1), e ao vertice 10(mesma coluna j,
+nesse caso em i +5 que seria na linha linha de baixo), mas nao podendo se ligar o vertice 6 por exemplo ja que este está em uma
+linha e coluna diferente.
+- 
+- o grafo é iniciado em 0 ja que há casos em que a policia não pode passar nem sequer pelo vertice 1
+nos casos de teste so precisamos saber por onde a policia não podera passar e assim iniciar a perseguição 
+fazemos isso usando uma função de bloqueio do mesmo tamnho do grafo que recebe o valores dos lugares com 1 na matriz indicando o
+lugar no grafo corresponde onde a busca não poderá passar
+e assim podemos começar a percorrer o grafo usando busca em largura, além dela não visitar os vertices ja visitados
+ela também não podera visitar os vetices que estão bloqueados, e assim com a distancia sendo calculada em um vetor para cada vertice,
+no final se a distacia do ultimo vertice for desconhecida então a polica não conseguiu chegar até o ladrão,
+caso a distacia seja conehcida, então o policia chegou até o ladrão.
+
+------------------------------------//----------------------------------------
+
+dudu faz serviço - 1610
+dudu precisa saber se vai conseguir finalizar sua tarefa de trabalho com documentos que podem ter dependecias em um loop eterno
+para fazer isso foi utiliza um grafo direcinado de lista adjacente que verifica se há um ciclo https://www.geeksforgeeks.org/archives/18212
+o fucionamento geral do algoritmo com a busca em prfundidade é, usando juntamente com a variavel booleana que verifica se o um vertice
+foi visitado, outra booleana para verificar se ocorreu ciclo, quando busca esta preste a passar por um vertice que ja foi visitado,
+ela detecta que ocorreu um ciclo.
+cada documento é uma aresta, nos teste  eca da os nuero de documentos, que é o tamnho do grafo e as depedencias existentes 
+dado nos casos de teste uma sequencia de dependencias de documentos, de dois em dois, A se liga com B direcionadamente
+e assim inicia se a busca de se há um ciclo no gafro, caso haja entao dudu nunca conseguirá terminar sua tarefa
+
+
+
+
+
+
+
+
+
+
+
+
