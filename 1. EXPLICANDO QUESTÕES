@@ -63,3 +63,25 @@ Em seguida começamos a dizer os caminhos a serem desenhados, para cada caminho 
 Por fim imprimos a quantidade de movimentos que foram feitos, contabilizados pela nossa função DFS que retorna a variável contadora,
 que armazenou essa quantidade.
 
+--------------------//-------------------------
+
+Países em guerra - 1148
+Problema: O mundo está em guerra e espiões tem de se comunicar via correios enviando cartas, mas nem todos os países trocam cartas,
+para isso são feitos acordos entre eles.
+As cartas são enviadas por agencias, caso uma carta seja enviada de uma agencia A para uma agencia B e elas estao no mesmo país, a carta
+é enviada instantaneamente, caso contrario, leva um tempo até que a carta chegue ao local destino.
+
+Solução: utilizando a noção de djikstra para fazermos um grafo onde os dados das agencias serão armazenados.
+Criamos a estrutura do grafo, contendo vertices, arestas e uma matriz que armazena pontos e seus adjacentes.
+Uma função baseada na de djikstra que será o "controle" do envio de cartas.
+
+Recebo a quantidade de cidades e de acordos que serão feitos.
+Faço com que para cada cidade o código atualize meu grafo para que tenhamos cidades nele, como os pontos do grafo.
+Recebo então o acordo entre os países, compostos de, cidade de origem, cidade destino e tempo estimado para envio da carta entre os dois 
+locais.
+Verifico então se tais cidades que recebo nos acordos foram colocadas previamente no grafo, se sim atualizo e armazeno ali o tempo
+estimado para o envio, se não, coloco 0 na posição, isso indica que aquela cidade informada no acordo não existe no meu grafo.
+Então recebo a quantidade de consultas que irei fazer.
+Digo a cidade de origem e a destino.
+Então a função me retorna se a carta foi enviada, se sim, imprime o tempo em horas, se não, informo que a carta não pode ser enviada.
+
