@@ -1,6 +1,8 @@
 ESTRADAS ESCURAS 1152
-PROBLEMA: Byteland quer economizar, eles querem ligar só as luzes necessárias, onde sempre existirá algum caminho iluminado de qualquer junção de Byteland para qualquer outra junção.
-Você recebe o número de junções, a quantidade de ruas, e em seguida 3 valores especificando qual será a estrada bidirecional entre x e y com z metros.
+PROBLEMA: Byteland quer economizar, eles querem ligar só as luzes necessárias, onde sempre existirá algum caminho iluminado de qualquer
+junção de Byteland para qualquer outra junção.
+Você recebe o número de junções, a quantidade de ruas, e em seguida 3 valores especificando qual será a estrada bidirecional
+entre x e y com z metros.
 
 SOLUÇÃO:
 São utilizados 2 vetores:
@@ -12,7 +14,10 @@ custo, que recebe o tamanho/gasto de todas as rotas ao adicioná-las no VETOR1;
 redução, que recebe o tamanho/custo de apenas as rotas selecionadas ao adicioná-las no VETOR ROTAS;
 
 Recebo todos os valores das possíveis rotas e armazeno no VETOR 1. Dou um quicksort de acordo com o tamanho da rota em ordem crescente.
-Em loop até n(quantidade de junções), verifico se o aquela posição do vetor rota já possui uma rota atribuída, se não, a rota de posição i é selecionada, e o contador de redução recebe quanto será gasto naquela rota. enfim, a posição correspondente ao inicio do caminho da rota recebe a rota utilizada, assim evitando que outras rotas sejam selecionada para aquele caminho.
+Em loop até n(quantidade de junções), verifico se o aquela posição do vetor rota já possui uma rota atribuída, se não, a rota de posição
+i é selecionada, e o contador de redução recebe quanto será gasto naquela rota.
+enfim, a posição correspondente ao inicio do caminho da rota recebe a rota utilizada, 
+assim evitando que outras rotas sejam selecionada para aquele caminho.
 Enfim um printf com o custo - redução = quanto será economizado com o novo sistema de iluminação.
 
 --------------------//-------------------------
@@ -99,24 +104,24 @@ linha e coluna diferente.
 - 
 - o grafo é iniciado em 0 ja que há casos em que a policia não pode passar nem sequer pelo vertice 1
 nos casos de teste so precisamos saber por onde a policia não podera passar e assim iniciar a perseguição 
-fazemos isso usando uma função de bloqueio do mesmo tamnho do grafo que recebe o valores dos lugares com 1 na matriz indicando o
+fazemos isso usando uma função de bloqueio do mesmo tamanho do grafo que recebe o valores dos lugares com 1 na matriz indicando o
 lugar no grafo corresponde onde a busca não poderá passar
 e assim podemos começar a percorrer o grafo usando busca em largura, além dela não visitar os vertices ja visitados
 ela também não podera visitar os vetices que estão bloqueados, e assim com a distancia sendo calculada em um vetor para cada vertice,
-no final se a distacia do ultimo vertice for desconhecida então a polica não conseguiu chegar até o ladrão,
-caso a distacia seja conehcida, então o policia chegou até o ladrão.
+no final se a distacia do ultimo vertice for desconhecida então a policica não conseguiu chegar até o ladrão,
+caso a distacia seja conhecida, então o policia chegou até o ladrão.
 
 ------------------------------------//----------------------------------------
 
 dudu faz serviço - 1610
 dudu precisa saber se vai conseguir finalizar sua tarefa de trabalho com documentos que podem ter dependecias em um loop eterno
-para fazer isso foi utiliza um grafo direcinado de lista adjacente que verifica se há um ciclo https://www.geeksforgeeks.org/archives/18212
-o fucionamento geral do algoritmo com a busca em prfundidade é, usando juntamente com a variavel booleana que verifica se o um vertice
+para fazer isso foi utiliza um grafo direcinado de lista adjacente que verifica se há um ciclo: https://www.geeksforgeeks.org/archives/18212
+o funcionamento geral do algoritmo com a busca em prfundidade é, usando juntamente com a variavel booleana que verifica se o um vertice
 foi visitado, outra booleana para verificar se ocorreu ciclo, quando busca esta preste a passar por um vertice que ja foi visitado,
 ela detecta que ocorreu um ciclo.
-cada documento é uma aresta, nos teste  eca da os nuero de documentos, que é o tamnho do grafo e as depedencias existentes 
+cada documento é uma aresta, nos teste é dados o numero de documentos, que é o tamanho do grafo e as depedencias existentes 
 dado nos casos de teste uma sequencia de dependencias de documentos, de dois em dois, A se liga com B direcionadamente
-e assim inicia se a busca de se há um ciclo no gafro, caso haja entao dudu nunca conseguirá terminar sua tarefa
+e assim inicia se a busca de se há um ciclo no grafo, caso haja entao dudu nunca conseguirá terminar sua tarefa.
 
 
 
